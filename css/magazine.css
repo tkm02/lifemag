@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../medias/ICOP3PEJVNDCJFVLKC7WK4H2TE.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.largeur {
+  width: 100%;
+}
+
+/* la barre de vavigation */
+
+.glassmorphism {
+  background: rgba(214, 210, 210, 0.4);
+  /* background-color: #e6592b; */
+
+  /* Couleur de fond avec opacité */
+  backdrop-filter: blur(10px);
+  /* Flou du fond */
+  border: 1px solid rgba(151, 144, 144, 0.2);
+  /* Bordure transparente */
+  box-shadow: 0 4px 6px rgba(71, 70, 70, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* Ombre */
+}
+
+.navbar-brand img {
+  height: 45px;
+  width: auto;
+  margin-right: 10%;
+}
+
+nav ul li {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: 'Outfit', sans-serif;
+
+}
+
+.navbar-item a {
+  color: #fff;
+  position: relative;
+  text-decoration: none; /* Supprimez le soulignement par défaut des liens */
+}
+
+.navbar-item a::after {
+  content: "";
+  position: absolute;
+  background-color: #f0f0f0;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 5px;
+  transition: 0.4s;
+}
+
+.navbar-item a:hover,
+.navbar-item a.active {
+  color: #f0f0f0;
+}
+
+.navbar-item a:hover::after,
+.navbar-item a.active::after, .navbar-item .active{
+  width: 100%;
+  color: #f0f0f0 !important;
+}
+.btn-voir{
+  background-color: #e6592b !important;
+  border: none !important;
+  color: #fff !important;
+  transition: background .3s ease-in-out !important  ;
+}
+.btn-voir:hover{
+  background-color: transparent !important;
+  border: 1px solid !important;
+  color: #fff !important;
+}
+/* .nav-link.active{
+  color: #f0f0f0 !important;
+}*/
+
+/* Autres styles pour les liens non actifs ou non survolés ici */
+
+
+.form-control.searchbar:focus {
+  box-shadow: 0 0 0 0.25rem rgba(27, 27, 27, 0.171);
+  /* Vous pouvez également ajuster l'ombre si nécessaire */
+}
+
+/* main */
+
+p {
+  font-size: 1.4em;
+  font-family: 'Outfit', sans-serif;
+
+}
+
+/* main slider */
+
+.swiper {
+  width: 90%;
+  height: 500px;
+  padding-top: 10%;
+}
+
+.swiper-wrapper {
+  margin-top: -10%
+}
+
+.swiper-slide {
+  position: relative;
+  width: 350px;
+  aspect-ratio: portrait;
+  border-radius: 10%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.swiper-pagination {
+  --swipwe-pagination-bottom: -6px;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  width: 25px;
+  background-color: #ffffff;
+  border-radius: 14px;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #ffffff;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  color: #ffffff;
+}
+
+/* footer */
+
+footer {
+  height: 65px;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+
+/* Partie responsive */
+
+@media (max-width: 1400px) {
+  .largeur {
+    width: 85%;
+  }
+  p{
+    color: #f1f1f1;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .largeur {
+    width: 95%;
+  }
+  p{
+    color: #f1f1f1;
+  }
+
+  .rsicon {
+    justify-content: center;
+  }
+
+  .lnlink p {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  body {
+    background-image: url(../medias/ICOP3PEJVNDCJFVLKC7WK4H2TE.jpg);
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+  p{
+    color: #f1f1f1;
+  }
+  form {
+    width: 35%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  nav ul li {
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  form {
+    width: 50%;
+
+  }
+  p{
+    color: #f1f1f1;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url(../medias/ICOP3PEJVNDCJFVLKC7WK4H2TE.jpg);
+  }
+
+  form {
+    width: 70%;
+  }
+
+  p {
+    font-size: 1em;
+    color: #f1f1f1;
+  }
+
+  .swiper {
+    width: 90%;
+    height: 350px;
+    padding-top: 10%;
+  }
+
+
+  .swiper-slide {
+    position: relative;
+    width: 70%;
+    aspect-ratio: portrait;
+    border-radius: 10%;
+  }
+
+}

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../medias/ICOP3PEJVNDCJFVLKC7WK4H2TE.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+}
+
+
+.largeur {
+  width: 80%;
+}
+
+/* la barre de vavigation */
+
+.glassmorphism {
+  background: rgba(214, 210, 210, 0.4);
+  /* Couleur de fond avec opacité */
+  backdrop-filter: blur(10px);
+  /* Flou du fond */
+  border: 1px solid rgba(151, 144, 144, 0.2);
+  /* Bordure transparente */
+  box-shadow: 0 4px 6px rgba(71, 70, 70, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* Ombre */
+}
+
+
+.navbar-brand img {
+  height: 45px;
+  width: auto;
+  margin-right: 10%;
+}
+
+nav ul li {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.navbar-item a {
+  color: #000000;
+  position: relative;
+}
+
+.navbar-item a::after {
+  content: "";
+  position: absolute;
+  background-color: #f0f0f0;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 5px;
+  transition: 0.4s;
+}
+
+.navbar-item a:hover {
+  color: #f0f0f0;
+}
+
+.navbar-item a:hover::after {
+  width: 100%;
+}
+
+.form-control.searchbar:focus {
+  box-shadow: 0 0 0 0.25rem rgba(27, 27, 27, 0.171);
+  /* Vous pouvez également ajuster l'ombre si nécessaire */
+}
+
+/* main */
+.desc-btn button {
+  width: 60%;
+}
+
+p {
+  font-size: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 160px;
+  background-color: #5e5858;
+}
+
+/* footer */
+
+footer {
+  height: 65px;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* Partie responsive */
+
+@media (max-width: 1400px) {
+  .largeur {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .largeur {
+    width: 95%;
+  }
+
+  .rsicon {
+    justify-content: center;
+  }
+
+  .lnlink p {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+
+  form {
+    width: 35%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  nav ul li {
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  form {
+    width: 50%;
+
+  }
+}
+
+@media (max-width: 576px) {
+  body{
+    background-image: url(../medias/ICOP3PEJVNDCJFVLKC7WK4H2TE.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  form {
+    width: 70%;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+}
